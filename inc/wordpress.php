@@ -43,7 +43,6 @@ if(get_option('cfturnstile_login')) {
 	function cfturnstile_wp_login_check($user) {
 
 		// Check skip
-		if(!isset($user->ID)) { return $user; }
 		if(defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST) { return $user; } // Skip XMLRPC
 		if(defined( 'REST_REQUEST' ) && REST_REQUEST) { return $user; } // Skip REST API
 		if(isset($_POST['edd_login_nonce']) && wp_verify_nonce( sanitize_text_field($_POST['edd_login_nonce']), 'edd-login-nonce')) { return $user; } // Skip EDD

@@ -118,7 +118,9 @@ If this plugin helps you, or you want to support its development, please conside
 	<table>
 		<tr>
 			<td valign="middle" style="padding-right:16px;">
-				<a href="https://www.relywp.com"><img src="https://relywp.com/wp-content/uploads/2020/07/RelyWP-Logo-1.png" alt="RelyWP" width="150" /></a>
+				<a href="https://www.relywp.com">
+				<img src="https://relywp.com/wp-content/uploads/2020/07/RelyWP-Logo-1.png" alt="RelyWP" width="150" />
+				</a>
 			</td>
 			<td valign="middle">
 				WordPress &amp; WooCommerce Plugins, and Care Plans
@@ -134,8 +136,8 @@ If this plugin helps you, or you want to support its development, please conside
 		<tr>
 			<td valign="middle" style="padding-right:16px;">
 				<a href="https://www.couponaffiliates.com">
-                Coupon Affiliates
-                </a>
+                <img src="https://couponaffiliates.com/wp-content/uploads/2021/06/couponaffiliates-logo.png" alt="RelyWP" width="150" />
+				</a>
             </td>
             <td valign="middle">
 				WooCommerce Affiliate Plugin
