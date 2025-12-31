@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Simple CAPTCHA Alternative with Cloudflare Turnstile
  * Description: Easily add Cloudflare Turnstile to your WordPress forms. The user-friendly, privacy-preserving CAPTCHA alternative.
- * Version: 1.36.0
+ * Version: 1.36.1
  * Author: Elliot Sowersby, RelyWP
  * Author URI: https://www.relywp.com
  * License: GPLv3 or later
@@ -69,11 +69,9 @@ function cfturnstile_admin_script_enqueue() {
 }
 add_action('admin_enqueue_scripts', 'cfturnstile_admin_script_enqueue');
 
-/**
- * Include Errors
- */
+// Include Errors
 include(plugin_dir_path(__FILE__) . 'inc/errors.php');
-// Resource hints for Turnstile (optional; enabled via Advanced Settings)
+// Resource hints for Turnstile
 include(plugin_dir_path(__FILE__) . 'inc/integrations/other/resource-hints.php');
 
 /**
@@ -98,9 +96,9 @@ if (!empty(get_option('cfturnstile_key')) && !empty(get_option('cfturnstile_secr
 		/* Turnstile */
 		wp_enqueue_script("cfturnstile", "https://challenges.cloudflare.com/turnstile/v0/api.js?render=auto", array(), null, $defer);
 		/* Disable Button */
-		if (get_option('cfturnstile_disable_button')) { wp_enqueue_script('cfturnstile-js', plugins_url('/js/disable-submit.js', __FILE__), array('cfturnstile'), '5.0', $defer); }
+		if (get_option('cfturnstile_disable_button')) { wp_enqueue_script('cfturnstile-js', plugins_url('/js/disable-submit.js', __FILE__), array('cfturnstile'), '5.0'); }
 		/* WooCommerce */
-		if (cft_is_plugin_active('woocommerce/woocommerce.php')) { wp_enqueue_script('cfturnstile-woo-js', plugins_url('/js/integrations/woocommerce.js', __FILE__), array('jquery', 'cfturnstile', 'wp-data'), '1.2', $defer); }
+		if (cft_is_plugin_active('woocommerce/woocommerce.php')) { wp_enqueue_script('cfturnstile-woo-js', plugins_url('/js/integrations/woocommerce.js', __FILE__), array('jquery', 'cfturnstile', 'wp-data'), '1.2'); }
 		/* WPDiscuz */
 		if(cft_is_plugin_active('wpdiscuz/class.WpdiscuzCore.php')) { wp_enqueue_style('cfturnstile-css', plugins_url('/css/cfturnstile.css', __FILE__), array(), '1.2'); }
 		/* Blocksy */

@@ -39,7 +39,7 @@ function cfturnstile_field_reset() {
  */
 if(get_option('cfturnstile_login')) {
 	add_action('login_form','cfturnstile_field_login');
-	add_action('authenticate', 'cfturnstile_wp_login_check', 21, 1);
+	add_filter('authenticate', 'cfturnstile_wp_login_check', 21, 1);
 	function cfturnstile_wp_login_check($user) {
 
 		// Check skip

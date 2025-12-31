@@ -480,7 +480,7 @@ function cfturnstile_settings_page() {
 							<?php echo esc_html__('Defer Scripts', 'simple-cloudflare-turnstile'); ?>
 						</th>
 						<td><input style="margin: 5px 0 20px 10px;" type="checkbox" name="cfturnstile_defer_scripts" <?php if (get_option('cfturnstile_defer_scripts', 1)) { ?>checked<?php } ?>>
-						<i style="font-size: 10px;"><?php echo esc_html__('When enabled, the javascript files loaded by the plugin will be deferred. You can disable this if it causes any issues with your other optimisations.', 'simple-cloudflare-turnstile'); ?></i>
+						<i style="font-size: 10px;"><?php echo esc_html__('When enabled, some javascript files loaded by the plugin will be deferred. You can disable this if it causes any issues with your other optimisations.', 'simple-cloudflare-turnstile'); ?></i>
 						</td>
 					</tr>
 
